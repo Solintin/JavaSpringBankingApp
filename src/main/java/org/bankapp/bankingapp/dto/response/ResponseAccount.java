@@ -1,9 +1,7 @@
-package org.bankapp.bankingapp.dto;
+package org.bankapp.bankingapp.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
-
-import java.math.BigDecimal;
 
 @Builder
 @Data

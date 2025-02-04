@@ -2,6 +2,7 @@ package org.bankapp.bankingapp.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.bankapp.bankingapp.entity.enums.AccountType;
 
 @Builder
 @Getter
@@ -21,6 +22,12 @@ public class Account {
     @Column(name = "account_holder_name")
     private String accountHolderName;
     private int accountNumber;
+    @Enumerated(EnumType.STRING)
+    private AccountType accountType;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
 
 }
